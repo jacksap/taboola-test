@@ -19,7 +19,10 @@ request.onload = function () {
       const h1 = document.createElement('h1');
       h1.textContent = advertisement.name;
       const img = document.createElement('img');
+      const a = document.createElement('a');
       img.setAttribute("src", advertisement.thumbnail[0].url);
+      a.setAttribute("href", advertisement.url);
+      a.appendChild(img);
 
       const p = document.createElement('p');
       advertisement.name = advertisement.branding.substring(0, 300);
@@ -28,7 +31,7 @@ request.onload = function () {
       container.appendChild(card);
       card.appendChild(h1);
       card.appendChild(p);
-      card.appendChild(img);
+      card.appendChild(a);
     });
   } else {
     const errorMessage = document.createElement('marquee');
