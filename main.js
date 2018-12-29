@@ -23,6 +23,7 @@ request.onload = function () {
       const a = document.createElement('a');
       img.setAttribute("src", advertisement.thumbnail[0].url);
       a.setAttribute("href", advertisement.url);
+      // make it open in new tab
       a.appendChild(img);
       
       const p = document.createElement('p');
