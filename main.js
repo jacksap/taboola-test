@@ -15,6 +15,7 @@ request.onload = function () {
     data.list.forEach(advertisement => {
       const card = document.createElement('div');
       card.setAttribute('class', 'card');
+      card.setAttribute("style", `width: ${advertisement.thumbnail[0].width}; height: ${advertisement.thumbnail[0].height}`);
 
       const h1 = document.createElement('h1');
       h1.textContent = advertisement.name;
@@ -23,7 +24,7 @@ request.onload = function () {
       img.setAttribute("src", advertisement.thumbnail[0].url);
       a.setAttribute("href", advertisement.url);
       a.appendChild(img);
-
+      
       const p = document.createElement('p');
       advertisement.name = advertisement.branding.substring(0, 300);
       p.textContent = `${advertisement.branding}`;
