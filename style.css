@@ -1,8 +1,7 @@
 #root {
-    background-color: #f9f9f9;
-    margin: 10px 30px;
+    margin: 0 30px;
     width: 955px;
-    height: 750px;
+    height: max-content;
 }
 .container {
     display: flex;
@@ -12,6 +11,10 @@
     flex-wrap: wrap;
     text-align: left;
     height: 100%;
+    background-color: #f9f9f9;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
 }
 .header {
     display: flex;
@@ -19,8 +22,8 @@
     margin: 0 1.5%;
     margin-bottom: 2%;
     position: relative;
-    top: 25px;
-    width: 69.5vw;
+    top: 55px;
+    width: 72.5vw;
 }
 
 h1 {
@@ -39,8 +42,8 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18.0px;
     font-weight: bold;
-    margin: 0.5rem;
-    padding: 0 8px;
+    padding: 0.5em;
+    margin-top: 0.5em;
     margin-bottom: 111px;
     width: 30%;
     background-repeat: no-repeat;
@@ -79,5 +82,34 @@ body {
 }
 
 img {
-    width: 282px;
+    width: 312px;
+}
+
+@media screen and (max-width: 750px) {
+header {
+    width: 85.5vw;
+}
+}
+@media screen and (max-width: 400px) {
+    .container {
+        width: 35vw;
+    }
+    h4 {
+        width: 280px;
+    }
+    p {
+        width: 280px;
+    }
+    .adCard {
+        margin-top: 30px;
+        width: 85%;
+    }
+    .header {
+        margin: 0;
+        margin-left: 5px;
+        width: 68.5vw;
+    }
+    .header a{
+        margin-top: 3px;
+    }
 }
