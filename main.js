@@ -15,11 +15,13 @@ request.onload = function () {
         data.list.forEach(advertisement => {
             const adCard = document.createElement('div');
             adCard.setAttribute('class', 'adCard');
-            adCard.setAttribute("style", `background-image: url('${advertisement.thumbnail[0].url}');`);
-            // adCard.setAttribute("style", `width: ${advertisement.thumbnail[0].width}; height: ${advertisement.thumbnail[0].height}`);
+
+            const adThumbnail = document.createElement('img');
+            adThumbnail.setAttribute("src", advertisement.thumbnail[0].url);
 
             const h4 = document.createElement('h4');
             h4.textContent = advertisement.name;
+
             const a = document.createElement('a');
             a.setAttribute("href", advertisement.url);
             a.setAttribute("target", '_blank');
@@ -31,8 +33,9 @@ request.onload = function () {
 
             container.appendChild(adCard);
             adCard.appendChild(a);
-            adCard.appendChild(h4);
-            adCard.appendChild(p);
+            a.appendChild(adThumbnail);
+            a.appendChild(h4);
+            a.appendChild(p);
         });
     } else {
         const errorMessage = document.createElement('marquee');
