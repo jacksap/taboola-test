@@ -1,6 +1,8 @@
 #root {
     background-color: #f9f9f9;
-    margin: 0 33px;
+    margin: 10px 30px;
+    width: 955px;
+    height: 750px;
 }
 .container {
     display: flex;
@@ -9,11 +11,12 @@
     width: 75vw;
     flex-wrap: wrap;
     text-align: left;
+    height: 100%;
 }
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 1%;
+    margin: 0 1.5%;
     margin-bottom: 2%;
     position: relative;
     top: 25px;
