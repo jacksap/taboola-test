@@ -1,3 +1,26 @@
+@media screen and (max-width: 400px) {
+    .container {
+        width: 35vw;
+    }
+    h4 {
+        width: 280px;
+    }
+    p {
+        width: 280px;
+    }
+    .adCard {
+        margin-top: 30px;
+        width: 90%;
+    }
+    .header {
+        margin: 0;
+        margin-left: 5px;
+        width: 68.5vw;
+    }
+    .header a{
+        margin-top: 3px;
+    }
+}
 #root {
     margin: 0 30px;
     width: 955px;
@@ -85,31 +108,8 @@ img {
     width: 312px;
 }
 
-@media screen and (max-width: 750px) {
+/* @media screen and (max-width: 750px) {
 header {
     width: 85.5vw;
 }
-}
-@media screen and (max-width: 400px) {
-    .container {
-        width: 35vw;
-    }
-    h4 {
-        width: 280px;
-    }
-    p {
-        width: 280px;
-    }
-    .adCard {
-        margin-top: 30px;
-        width: 85%;
-    }
-    .header {
-        margin: 0;
-        margin-left: 5px;
-        width: 68.5vw;
-    }
-    .header a{
-        margin-top: 3px;
-    }
-}
+} */
