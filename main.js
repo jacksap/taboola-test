@@ -15,17 +15,15 @@ request.onload = function () {
         data.list.forEach(advertisement => {
             const adCard = document.createElement('div');
             adCard.setAttribute('class', 'adCard');
+            adCard.setAttribute("style", `background-image: url('${advertisement.thumbnail[0].url}');`);
             // adCard.setAttribute("style", `width: ${advertisement.thumbnail[0].width}; height: ${advertisement.thumbnail[0].height}`);
 
             const h4 = document.createElement('h4');
             h4.textContent = advertisement.name;
-            const img = document.createElement('img');
             const a = document.createElement('a');
-            img.setAttribute("src", advertisement.thumbnail[0].url);
             a.setAttribute("href", advertisement.url);
             a.setAttribute("target", '_blank');
             // make it open in new tab
-            a.appendChild(img);
 
             const p = document.createElement('p');
             advertisement.name = advertisement.branding.substring(0, 300);
